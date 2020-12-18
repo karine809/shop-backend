@@ -24,8 +24,6 @@ class CreateAnnoucementsTable extends Migration
             $table->timestamps();
 
 
-
-
         });
     }
 

@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 
 class AuthController extends Controller
 {
@@ -14,7 +19,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('auth:api', ['except' => ['login','signup']]);
     }
 
     /**
@@ -25,7 +30,7 @@ class AuthController extends Controller
     public function login()
 
     {
-        dd('hjhghj');
+
         $credentials = request(['email', 'password']);
 
         if (! $token = auth()->attempt($credentials)) {
@@ -33,6 +38,35 @@ class AuthController extends Controller
         }
 
         return $this->respondWithToken($token);
+    }
+    public function signup(Request $request)
+    {
+        $rules = [
+            'firstname' => 'required|max:20|string',
+            'lastname' => 'required|max:20|string',
+            'age' => 'numeric|required',
+            'email' => 'required|email:rfc,dns|unique:users',
+            'password' => 'required|min:6|string',
+            'confirm_password' => 'required|same:password'
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            $errors = $validator->errors();
+            return response($errors, 419);
+        } else {
+
+            User::create([
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'age' => $request->age,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+
+            return response('success', 200);
+        }
     }
 
     /**
