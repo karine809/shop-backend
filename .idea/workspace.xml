@@ -131,7 +131,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -166,7 +166,13 @@
       <workItem from="1608192332389" duration="4140000" />
       <workItem from="1608213369768" duration="1979000" />
       <workItem from="1608238426981" duration="1276000" />
-      <workItem from="1608281300597" duration="1865000" />
+      <workItem from="1608281300597" duration="2459000" />
+      <workItem from="1608303832805" duration="10000" />
+      <workItem from="1608371421004" duration="10000" />
+      <workItem from="1608375874475" duration="11048000" />
+      <workItem from="1608455688675" duration="17161000" />
+      <workItem from="1608537367830" duration="7382000" />
+      <workItem from="1608667655914" duration="1974000" />
     </task>
     <servers />
   </component>
@@ -178,10 +184,14 @@
       <screen x="0" y="0" width="1366" height="722" />
     </state>
     <state x="390" y="4" key="#PHP/0.0.1366.722@0.0.1366.722" timestamp="1607966347786" />
-    <state x="463" y="116" key="FileChooserDialogImpl" timestamp="1608281376405">
+    <state x="413" y="116" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608382446395">
       <screen x="0" y="0" width="1366" height="722" />
     </state>
-    <state x="463" y="116" key="FileChooserDialogImpl/0.0.1366.722@0.0.1366.722" timestamp="1608281376405" />
+    <state x="413" y="116" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.722@0.0.1366.722" timestamp="1608382446395" />
+    <state x="463" y="116" key="FileChooserDialogImpl" timestamp="1608581599531">
+      <screen x="0" y="0" width="1366" height="722" />
+    </state>
+    <state x="463" y="116" key="FileChooserDialogImpl/0.0.1366.722@0.0.1366.722" timestamp="1608581599531" />
     <state x="438" y="84" key="NewPhpClassDialog" timestamp="1608025182910">
       <screen x="0" y="0" width="1366" height="722" />
     </state>
